@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>艺术赛事填报系统</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico"> 
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/js/plugins/layui/assets/css/layui.css" rel="stylesheet">
+    <link href="assets/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+	<link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+	<link href="assets/css/plugins/steps/flow.css" rel="stylesheet">    
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style type="text/css">
+    	.wizard > .content > .body input{border: none !important;}
+    	.layui-input{border: none;width: 100%;}
+    </style>
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row" style="background-color: #FFF;margin: 5px;">
+    		<blockquote class="layui-elem-quote pa0" style="background-color: #fff;margin-bottom:0;">
+				<a onclick="javascript:history.back(-1);" class="btn btn-lg"><i class="glyphicon glyphicon-share-alt"></i>　返回</a>
+			</blockquote>
+            <div class="col-sm-12">
+            	<div class="ibox">
+					<div class="ibox-title">
+						<h3><b>添加比赛项目</b></h3>
+						<div class="col-md-12">
+							<div class="flow">
+								<div class="flowListBox"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="ibox-content layui-form wizard-big">
+						<div class="col-md-12" id="flowDiv" style="padding: 20px 0;">
+							<ol id="iList">
+								<div id="contA">
+									<fieldset>
+                            <fieldset>
+								<div class="layui-tab layui-tab-card">
+								  <ul class="layui-tab-title">
+								    <li class="layui-this">表演节目</li>
+								    <li>艺术作品</li>
+								    <li>艺术工作坊</li>
+								    <li>美育案例</li>
+								    <li>艺术课程</li>
+								  </ul>
+								  <div class="layui-tab-content pa0" style="height: 100%;">
+								    <div class="layui-tab-item layui-show">
+								    	<div class="pd-20">
+									        <div class="layui-form">
+									            <table class="layui-table">
+									                <colgroup>
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="200">
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="150">
+									                </colgroup>
+									                <tbody>
+									                <tr>
+									                    <th class="bg-info box" colspan="6">　　　　表演节目概况</th>
+									                </tr>
+								                    <tr>
+								                        <td class="bg-color">节目名称</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                        <td class="bg-color">报送学校</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">节目组别</td>
+								                        <td colspan="2">
+								                            <select name="">
+								                                <option value=""></option>
+								                                <option value="1">小学组</option>
+								                                <option value="2">中学组</option>
+								                                <option value="3">大学组</option>
+								                            </select>
+								                        </td>
+								                        <td class="bg-color">表现形式</td>
+								                        <td colspan="2">
+								                            <select name="interest" lay-filter="type">
+								                                <option value=""></option>
+								                                <option value="1">声乐</option>
+								                                <option value="2">舞蹈</option>
+								                                <option value="3">朗诵</option>
+								                                <option value="4">器乐</option>
+								                                <option value="5">戏剧</option>
+								                            </select>
+								                        </td>
+								                    </tr>
+								                    <tr>
+								                        <th class="bg-info box" colspan="6">　　　　表演节目具体信息</th>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color" class="bg-color">类别</td>
+								                        <td colspan="2" id="type2"> 请选择【表现形式】</td>
+								                        <td class="bg-color" rowspan="3">来源</td>
+								                        <td class="bg-color">作曲人</td>
+								                        <td><input class="layui-input  pa0"></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">原创</td>
+								                        <td colspan="2">
+								                            <select name="" lay-filter="">
+								                                <option value=""></option>
+								                                <option value="1">原创</option>
+								                                <option value="2">非原创</option>
+								                                <option value="3">改编</option>
+								                                <option value="4">学习</option>
+								                            </select>
+								                        </td>
+								                        <td class="bg-color">作词人</td>
+								                        <td><input class="layui-input"></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">节目时长</td>
+								                        <td colspan="2"><input class="layui-input"></td>
+								                        <td class="bg-color">编剧人</td>
+								                        <td><input class="layui-input"></td>
+								                    </tr>
+								                    <tr class="xq">
+								                        <td class="bg-color" rowspan="2">伴奏</td>
+								                        <td class="bg-color">伴奏类型</td>
+								                        <td><input class="layui-input"></td>
+								                        <td class="bg-color" rowspan="2">舞曲</td>
+								                        <td class="bg-color">编舞者</td>
+								                        <td><input class="layui-input"></td>
+								                    </tr>
+								                    <tr class="xq">
+								                        <td class="bg-color">伴奏类型</td>
+								                        <td><input class="layui-input"></td>
+								                        <td class="bg-color">编舞者</td>
+								                        <td><input class="layui-input"></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">备注</td>
+								                        <td colspan="5"><textarea placeholder="请输入内容···" class="layui-textarea"></textarea></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">上传</td>
+								                        <td colspan="5">
+															<div class="layui-upload-drag" id="test1">
+															  <i class="layui-icon"></i>
+															  <p>点击上传，或将文件拖拽到此处</p>
+															</div>
+								                        </td>
+								                    </tr>
+									                </tbody>
+									            </table>
+									        </div>
+      									</div>
+								    </div>
+								    <div class="layui-tab-item">
+								    	<div class="pd-20">
+									        <div class="layui-form">
+									            <table class="layui-table">
+									                <colgroup>
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="200">
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="150">
+									                </colgroup>
+									                <tbody>
+									                <tr>
+									                    <th class="bg-info box" colspan="6">　　　　艺术作品概况</th>
+									                </tr>
+								                    <tr>
+								                        <td class="bg-color">作品名称</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                        <td class="bg-color">报送学校</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">节目组别</td>
+								                        <td colspan="2">
+								                            <select name="">
+								                                <option value=""></option>
+								                                <option value="1">小学组</option>
+								                                <option value="2">中学组</option>
+								                                <option value="3">大学组</option>
+								                            </select>
+								                        </td>
+								                        <td class="bg-color">形式</td>
+								                        <td colspan="2">
+															<input class="layui-input">
+								                        </td>
+								                    </tr>
+								                    <tr>
+								                        <th class="bg-info box" colspan="6">　　　　艺术作品具体信息</th>
+								                    </tr>
+								                	<tr>
+								                        <td class="bg-color">类别</td>
+								                        <td colspan="2">
+								                            <select name="">
+								                                <option value=""></option>
+								                                <option value="1">绘画</option>
+								                                <option value="2">书法/篆刻</option>
+								                                <option value="3">摄影</option>
+								                                <option value="4">设计</option>
+								                                <option value="5">微电影</option>
+								                            </select>
+								                        </td>
+								                        <td class="bg-color">创作时间</td>
+								                        <td colspan="2">
+															<input type="text" name="date" id="date1" autocomplete="off" class="layui-input">
+								                        </td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">联系电话</td>
+								                        <td colspan="2"><input class="layui-input"></td>
+								                        <td class="bg-color">作品大小</td>
+								                        <td colspan="2"><input class="layui-input"></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">备注</td>
+								                        <td colspan="5"><textarea placeholder="请输入内容···" class="layui-textarea"></textarea></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">作品照片</td>
+								                        <td colspan="5">
+															<div class="layui-upload-drag" id="test2">
+															  <i class="layui-icon"></i>
+															  <p>点击上传，或将文件拖拽到此处 （请上传作品照片，且大小不超过20M）</p>
+															</div>
+								                        </td>
+								                    </tr>
+									                </tbody>
+									            </table>
+									        </div>
+      									</div>
+								    </div>
+								    <div class="layui-tab-item">
+								    	<div class="pd-20">
+									        <div class="layui-form">
+									            <table class="layui-table">
+									                <colgroup>
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="200">
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="150">
+									                </colgroup>
+									                <tbody>
+									                <tr>
+									                    <th class="bg-info box" colspan="6">　　　　艺术工作坊概况</th>
+									                </tr>
+								                    <tr>
+								                        <td class="bg-color">作品名称</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                        <td class="bg-color">类别</td>
+								                        <td colspan="2">
+								                            <select name="">
+								                                <option value=""></option>
+								                                <option value="1">绘画</option>
+								                                <option value="2">书法/篆刻</option>
+								                                <option value="3">摄影</option>
+								                                <option value="4">设计</option>
+								                                <option value="5">微电影</option>
+								                            </select>
+								                        </td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">报送学校</td>
+								                        <td colspan="5"><input class="layui-input pa0"></td>
+								                    </tr>
+									                </tbody>
+									            </table>
+									        </div>
+      									</div>
+								    </div>
+								    <div class="layui-tab-item">
+								    	<div class="pd-20">
+									        <div class="layui-form">
+									            <table class="layui-table">
+									                <colgroup>
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="200">
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="150">
+									                </colgroup>
+									                <tbody>
+									                <tr>
+									                    <th class="bg-info box" colspan="6">　　　　美育案例概况</th>
+									                </tr>
+								                    <tr>
+								                        <td class="bg-color">案例标题</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                        <td class="bg-color">案例类别</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">报送学校</td>
+								                        <td colspan="5"><input class="layui-input pa0"></td>
+								                    </tr>
+								                    <tr>
+								                        <th class="bg-info box" colspan="6">　　　　美育案例具体信息</th>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">案例简介</td>
+								                        <td colspan="5"><textarea placeholder="请输入···" class="layui-textarea"></textarea></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">案例内容</td>
+								                        <td colspan="5"><textarea placeholder="请输入···" class="layui-textarea"></textarea></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">论文附件</td>
+								                        <td colspan="5">
+															<div class="layui-upload-drag" id="test3">
+															  <i class="layui-icon"></i>
+															  <p>点击上传，或将文件拖拽到此处 （点击上传，只能上传doc/docx文件，且不超过30M）</p>
+															</div>
+								                        </td>
+								                    </tr>
+									                </tbody>
+									            </table>
+									        </div>
+      									</div>
+								    </div>
+								    <div class="layui-tab-item">
+								    	<div class="pd-20">
+									        <div class="layui-form">
+									            <table class="layui-table">
+									                <colgroup>
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="200">
+									                    <col width="150">
+									                    <col width="200">
+									                    <col width="150">
+									                </colgroup>
+									                <tbody>
+									                <tr>
+									                    <th class="bg-info box" colspan="6">　　　　艺术课程概况</th>
+									                </tr>
+								                    <tr>
+								                        <td class="bg-color">课题名称</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                        <td class="bg-color">课程名称</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">授课年级</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                        <td class="bg-color">授课班级</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">班级人数</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                        <td class="bg-color">教材名称<br>（版号 名称 课目）</td>
+								                        <td colspan="2"><input class="layui-input pa0"></td>
+								                    </tr>
+								                    <tr>
+								                        <th class="bg-info box" colspan="6">　　　　艺术课程具体信息</th>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">备注</td>
+								                        <td colspan="5"><textarea placeholder="请输入···" class="layui-textarea"></textarea></td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">教案上传</td>
+								                        <td colspan="5">
+															<div class="layui-upload-drag" id="test4">
+															  <i class="layui-icon"></i>
+															  <p>点击上传，或将文件拖拽到此处 （请上传pdf,word附件，且不超过20M）</p>
+															</div>
+								                        </td>
+								                    </tr>
+								                    <tr>
+								                        <td class="bg-color">视频上传</td>
+								                        <td colspan="5">
+															<div class="layui-upload-drag" id="test4">
+															  <i class="layui-icon"></i>
+															  <p>点击上传，或将文件拖拽到此处 （请上传MP4文件，且不超过300M）</p>
+															</div>
+								                        </td>
+								                    </tr>
+									                </tbody>
+									            </table>
+									        </div>
+      									</div>
+								    </div>
+								  </div>
+								</div>
+                            </fieldset>
+									</fieldset>
+								</div>
+								<div class="contentList" id="contB">
+									<fieldset>
+										<div class="pd-20">
+									        <div class="layui-form">
+									            <table class="layui-table">
+									                <colgroup>
+									                    <col width="150">
+									                    <col width="150">
+									                    <col width="150">
+									                </colgroup>
+									                <tbody>
+									                    <tr>
+									                    	<td class="bg-color">信息关联表下载</td>
+									                        <td colspan="3">
+									                        	<a href="http://zx.meiyusc.com/admin/works/program/downloadProgramSubmissionTab?workId=P2018090909473146481d18">
+																	<div class="layui-upload-drag">
+																	  <i class="glyphicon glyphicon-save" style="font-size: 50px;color: #177ce3;"></i>
+																	  <p>点击下载报送表（按照表格给的格式进行信息录入）</p>
+																	</div>
+																</a>
+									                        </td>
+									                    </tr>
+									                    <tr>
+									                        <td class="bg-color">上传信息关联表</td>
+									                        <td colspan="3">
+																<div class="layui-upload-drag" id="test4">
+																  <i class="layui-icon"></i>
+																  <p>按照表格中提供的格式,将学生和老师的信息进行录入，上传成功后即可关联，如需修改成员内容再次单独录入即可。</p>
+																</div>
+									                        </td>
+									                    </tr>
+									                </tbody>
+									            </table>
+									        </div>
+										</div>
+	                            	</fieldset>
+								</div>
+								<div class="contentList" id="contC">
+									<fieldset>
+								    	<div class="pd-20">
+									        <div class="layui-form">
+									            <table class="layui-table">
+									                <colgroup>
+									                    <col width="150">
+									                    <col width="150">
+									                    <col width="150">
+									                </colgroup>
+									                <tbody>
+									                    <tr>
+									                    	<td class="bg-color">报送表下载</td>
+									                        <td colspan="3">
+									                        	<a href="http://zx.meiyusc.com/admin/works/program/downloadProgramSubmissionTab?workId=P2018090909473146481d18">
+																	<div class="layui-upload-drag">
+																	  <i class="glyphicon glyphicon-save" style="font-size: 50px;color: #177ce3;"></i>
+																	  <p>点击下载报送表</p>
+																	</div>
+																</a>
+									                        </td>
+									                    </tr>
+									                    <tr>
+									                        <td class="bg-color">上传报送表</td>
+									                        <td colspan="3">
+																<div class="layui-upload-drag" id="test4">
+																  <i class="layui-icon"></i>
+																  <p>下载报送表，核对无误后以jpg/png图格式上传，不超过1M</p>
+																</div>
+									                        </td>
+									                    </tr>
+									                </tbody>
+									            </table>
+									        </div>
+										</div>
+									</fieldset>
+								</div>
+							</ol>
+						</div>
+					</div>
+					<div class="foot-btn">
+						<button type="button" class="btn btn-primary" id="btnBack">上一步</button>
+						<button type="button" class="btn btn-default revise" style="float:right; display:none" id="btnok">完成</button>
+						<button type="button" class="btn btn-success" style="float:right;" id="btnNext">下一步</button>
+					</div>
+					<div id="mask"></div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/plugins/layui/lay/dest/layui.all.js"></script>
+    <script src="assets/js/plugins/layui/assets/layui.js"></script>
+	<!-- Steps -->
+	<script src="assets/js/plugins/staps/flow2.js"></script>
+	<!-- Sweet alert -->
+	<script src="assets/js/plugins/sweetalert/sweetalert.min.js"></script>	
+	
+    <script type="text/javascript">
+        layui.use(['form','layer','laydate'], function(){
+            var form = layui.form
+            ,laydate = layui.laydate;
+            laydate.render({
+			    elem: '#date1'
+			});
+            form.on('select(type)', function(data){
+                var option='';
+                switch (data.value){
+                    case '1':
+                        $(".xq").show();
+                        option=
+                            '<select name="interest" lay-filter="aihao">'+
+                            '<option value=""></option>' +
+                            '<option value="1">合唱</option>' +
+                            '<option value="2">合唱</option>' +
+                            '<option value="3">表演唱</option>' +
+                            '<option value="4">重唱</option>' +
+                            '<option value="5">校歌</option>'+
+                            '</select>';
+                        break;
+                    case '2':
+                        $(".xq").show();
+                        option=
+                            '<select name="interest" lay-filter="aihao">'+
+                            '<option value=""></option>' +
+                            '<option value="1">群舞</option>' +
+                            '<option value="2">双人舞</option>' +
+                            '<option value="3">三人舞</option>'+
+                            '</select>';
+                        break;
+                    case '3':
+                        $(".xq").show();
+                        option=
+                            '无';
+                        break;
+                    case '4':
+                        $(".xq").show();
+                        option=
+                            '<select name="interest" lay-filter="aihao">'+
+                            '<option value=""></option>' +
+                            '<option value="1">合奏</option>' +
+                            '<option value="2">小合奏</option>' +
+                            '<option value="3">重奏</option>'+
+                            '</select>';
+                        break;
+                    case '5':
+                        $(".xq").hide();
+                        option=
+                            '<select name="interest" lay-filter="aihao">'+
+                            '<option value=""></option>' +
+                            '<option value="1">短剧</option>' +
+                            '<option value="2">小品</option>' +
+                            '<option value="3">戏曲</option>'+
+                            '<option value="4">音乐剧</option>' +
+                            '<option value="5">歌舞剧</option>' +
+                            '<option value="6">京剧</option>'+
+                            '<option value="7">其他</option>'+
+                            '</select>';
+                        break;
+                    default:
+                        option='请选择【表现形式】';
+                        break;
+                }
+                $('#type2').html(option);
+                form.render('select');
+            });
+        });
+    </script>
+	<script>
+	layui.use('upload', function(){
+	  var upload = layui.upload;
+	   
+	  //拖拽上传
+	  upload.render({
+	    elem: '#test1'
+	    ,url: '/upload/'
+	    ,done: function(res){
+	      //上传完毕回调
+	    }
+	    ,error: function(){
+	      //请求异常回调
+	    }
+	  });
+	  //拖拽上传
+	  upload.render({
+	    elem: '#test2'
+	    ,url: '/upload/'
+	    ,done: function(res){
+	      //上传完毕回调
+	    }
+	    ,error: function(){
+	      //请求异常回调
+	    }
+	  });
+	  //拖拽上传
+	  upload.render({
+	    elem: '#test3'
+	    ,url: '/upload/'
+	    ,done: function(res){
+	      //上传完毕回调
+	    }
+	    ,error: function(){
+	      //请求异常回调
+	    }
+	  }); 
+	  //拖拽上传
+	  upload.render({
+	    elem: '#test4'
+	    ,url: '/upload/'
+	    ,done: function(res){
+	      //上传完毕回调
+	    }
+	    ,error: function(){
+	      //请求异常回调
+	    }
+	  });
+	});
+	
+	$('.revise').click(function() {
+		swal({
+			icon: "success",
+			title: "添加成功",
+			type: "success",
+		})
+	});
+	</script>
+
+</body>
+</html>

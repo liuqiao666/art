@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>艺术赛事填报系统</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico"> 
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+	
+<div class="wrapper wrapper-content animated fadeInRight">
+	<div class="row ibox">
+	    <div class="ibox-title">
+	        <h5>各地区艺术赛事节目报送数据统计</h5>
+	    </div>
+		<div class="ibox-content data">
+			<div class="row">
+	    	    <div class="col-sm-1">
+	                <a href="data.html" class="btn btn-white btn-lg"><i class="glyphicon glyphicon-share-alt"></i>　返回地区</a>
+	            </div>
+	            <div class="col-sm-1">	
+		    		<button class="btn btn-white btn-lg"><i class="glyphicon glyphicon-open"></i> 导出信息</button>
+		  		</div>　
+	            <div class="col-sm-3 form-group" id="data">
+                    <div class="input-daterange input-group" id="datepicker">
+                    	<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <input type="text" class="input-lg form-control" name="start" value="开始日期"/>
+                        <span class="input-group-addon">-</span>
+                        <input type="text" class="input-lg form-control" name="end" value="结束日期"/>
+                    </div>
+	            </div>
+	        	<div class="col-sm-6 search-form">
+	                <form action="#" method="post">
+	                    <div class="input-group">
+	                        <input type="text" placeholder="输入要查询的地区名称···" name="search" class="form-control input-lg">
+	                        <div class="input-group-btn">
+	                            <button class="btn btn-lg btn-primary" type="submit">搜索</button>
+	                        </div>
+	                    </div>
+	                </form>
+	            </div>
+	        </div>  
+		    <table class="table table-bordered">
+				<thead class="is-group has-gutter">
+					<tr>
+						<th colspan="1" rowspan="2" class="center">
+							<div>学校</div>
+						</th>
+						<th colspan="6" rowspan="1" class="center">
+							<div>表演作品</div>
+						</th>
+						<th colspan="1" rowspan="2" class="center">
+							<div>校歌</div>
+						</th>
+						<th colspan="4" rowspan="1" class="center">
+							<div>艺术作品</div>
+						</th>
+						<th colspan="1" rowspan="2" class="center">
+							<div>优秀案例</div>
+						</th>
+						<th colspan="1" rowspan="2" class="center">
+							<div>工作坊</div>
+						</th>
+					</tr>
+					<tr>
+						<th colspan="1" rowspan="1" class="center">
+							<div>声乐</div>
+						</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div>器乐</div>
+						</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div>舞蹈</div>
+						</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div>朗诵</div>
+						</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div>戏剧</div>
+						</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div>小计(应/实)</div>
+						</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div>绘画</div>
+						</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div>书法篆刻</div>
+						</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div>摄影</div>
+						</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div>小计(应/实)</div>
+						</th>
+					</tr>
+				</thead>
+		        <tbody>
+					<tr class="center">
+						<td class="red-bg">汇总</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="red-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="red-color">50/42</td>
+						<td class="red-color">50/42</td>
+						<td class="red-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>富顺职业技术学校</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市自流井区檀木林小学</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市蜀光绿盛实验学校</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市解放路初级中学校</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡职业技术学校</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡广播电视中等专业学校</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市蜀光中学</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市花园琴行</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市自流井区光大街小学</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市育才小学</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市旭川中学</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市沿滩区仙市镇中心学校</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>富顺县东湖小学</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市自流井区塘坎上小学校</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市汇东实验学校</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>
+					<tr class="center">
+						<td>自贡市大安区大安小学校</td>
+						<td>1</td>
+						<td>1</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td>3</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+						<td class="green-color">50/42</td>
+					</tr>						
+		        </tbody>
+			</table>
+		</div>
+	</div>	
+</div>	
+    <!-- 全局js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/content.js"></script>
+    <!-- Data picker -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="assets/js/plugins/cropper/cropper.min.js"></script>
+    <script>
+    $(document).ready(function () {
+	    $('#data .input-daterange').datepicker({
+	        keyboardNavigation: false,
+	        forceParse: false,
+	        autoclose: true
+	    });
+	});
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>艺术赛事填报系统</title>
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link href="assets/js/plugins/layui/assets/css/layui.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                        	<a href="index.html">
+	                        	<i class="glyphicon glyphicon-grain"></i> 
+	                        	<font class="profile-elements">艺术赛事填报系统</font>
+                        	</a>
+                        </div>
+                        <div class="logo-element">Art</div>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="myactivity.html">
+                        	<i class="fa fa-table"></i> 
+                        	<span class="nav-label">我的赛事</span>
+                        	<span class="fa"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="growth.html">
+                        	<i class="fa fa-bar-chart-o"></i> 
+                        	<span class="nav-label">成长曲线</span>
+                        	<span class="fa"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        	<div class="row border-bottom phone_top">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                    	<a class="navbar-minimalize minimalize-styl-2" href="#">
+                    		<i class="glyphicon glyphicon-indent-right"></i> 
+                    	</a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right" style="float: right;">
+                    	<li>
+                        	<span class="label badge-primary navli">学生</span>                    		
+                    	</li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <img alt="header_image" class="img-circle" src="assets/img/bg.jpg" />
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            	<li data-toggle="modal" data-target="#myModal1">
+                                	<a href="#">个人资料</a>
+                                </li>
+                                <li data-toggle="modal" data-target="#myModal2">
+                                	<a href="#">修改密码</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                	<a href="login.html">安全退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row content-tabs">
+            	<button class="navbar-minimalize minimalize-styl-2 roll-left J_tabLeft" href="#"><i class="glyphicon glyphicon-indent-right"></i></button>
+                <button class="roll-nav"><i class="fa fa-backward"></i></button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="console.html">首页</a>
+                    </div>
+                </nav>
+                <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i></button>
+                <div class="btn-group roll-nav roll-right">
+                    <button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作<span class="caret"></span></button>
+                    <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li class="J_tabShowActive">
+                        	<a>定位当前选项卡</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="J_tabCloseAll">
+                        	<a>关闭全部选项卡</a>
+                        </li>
+                        <li class="J_tabCloseOther">
+                        	<a>关闭其他选项卡</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="roll-nav roll-right">
+                	<ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            	<span class="label badge-primary navli">学生</span>  
+                                <img alt="header_image" class="img-circle" src="assets/img/bg.jpg" />
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            	<li data-toggle="modal" data-target="#myModal1">
+                                	<a href="#">个人资料</a>
+                                </li>
+                                <li data-toggle="modal" data-target="#myModal2">
+                                	<a href="#">修改密码</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                	<a href="login.html">安全退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="myactivity.html" frameborder="0" data-id="myactivity.html" seamless></iframe>
+            </div>
+            <div class="footer">
+                <div class="pull-right">&copy;2014-2017</div>
+            </div>
+        </div>
+        <!--右侧部分结束-->
+    </div>
+    <div class="modal inmodal" id="myModal1" tabindex="-1" role="dialog"  aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content animated fadeIn">
+                <div class="modal-header">
+                    <h4 class="modal-title">个人资料</h4>
+                </div>
+	            <div class="modal-body layui-form layui-form-pane">
+					<div class="layui-form-item">
+					    <label class="layui-form-label">用户名</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="title" autocomplete="off" value="3289556416" class="layui-input">
+					    </div>
+					</div>
+					<div class="layui-form-item">
+					    <label class="layui-form-label">个人名称</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="title" autocomplete="off" value="学生" class="layui-input">
+					    </div>
+					</div>
+					<div class="layui-form-item">
+					    <label class="layui-form-label">联系电话</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="title" autocomplete="off" value="135659158526" class="layui-input">
+					    </div>
+					</div>
+					<div class="layui-form-item">
+					    <label class="layui-form-label">联系邮箱</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="title" autocomplete="off" value="12579626@qq.com" class="layui-input">
+					    </div>
+					</div>
+	                <div class="modal-footer">
+	                	<button type="button" class="btn btn-primary suf">确认</button>
+	                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div> 
+    <div class="modal inmodal" id="myModal2" tabindex="-1" role="dialog"  aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content animated fadeIn">
+                <div class="modal-header">
+                    <h4 class="modal-title">修改密码</h4>
+                </div>
+	            <div class="modal-body layui-form layui-form-pane">
+					<div class="layui-form-item">
+					    <label class="layui-form-label">原始密码</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="title" autocomplete="off" placeholder="请输入您的原始密码···" class="layui-input">
+					    </div>
+					</div>
+					<div class="layui-form-item">
+					    <label class="layui-form-label">新密码</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="title" autocomplete="off" placeholder="请输入您的新密码···" class="layui-input">
+					    </div>
+					</div>
+					<div class="layui-form-item">
+					    <label class="layui-form-label">确认密码</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="title" autocomplete="off" placeholder="请再次输入密码···" class="layui-input">
+					    </div>
+					</div>
+	                <div class="modal-footer">
+	                	<button type="button" class="btn btn-primary suf">确认</button>
+	                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>  
+    <!-- 全局js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/layui/assets/layui.js"></script>
+    <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="assets/js/hplus.js"></script>
+    <script src="assets/js/contabs.js"></script>
+    <!-- Sweet alert -->
+    <script src="assets/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <!-- 第三方插件 -->
+    <script src="assets/js/plugins/pace/pace.min.js"></script>
+	<script>
+	$('.suf').click(function () {
+        swal({
+            
+        	icon: "success",
+            title: "修改成功！",
+            type: "success",
+            buttons: {
+			    button1: {
+			      text: "OK",
+			      value: true,
+			    },
+			  },
+         })
+        .then(function(value) {
+			if (value) {
+			window.location.reload();
+			} else {
+			}
+       });
+	});
+	</script>
+</body>
+
+</html>

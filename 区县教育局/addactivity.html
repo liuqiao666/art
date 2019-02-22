@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>艺术赛事填报系统</title>
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/js/plugins/layui/css/bootstrap-fileinput.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.css" rel="stylesheet">
+		<link href="assets/js/plugins/layui/css/layui.css" rel="stylesheet">
+		<link href="assets/css/plugins/steps/flow.css" rel="stylesheet">
+		<link href="assets/css/animate.css" rel="stylesheet">
+		<link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+		<link href="assets/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content animated fadeInRight">
+			<div class="row" style="background-color: #FFF;margin: 5px;">
+				<div class="col-sm-12">
+					<div class="ibox">
+						<div class="ibox-title">
+							<h3><b>添加艺术赛事</b></h3>
+							<div class="col-md-12">
+								<div class="flow">
+									<div class="flowListBox"> </div>
+								</div>
+							</div>
+						</div>
+						<div class="ibox-content layui-form wizard-big">
+							<div class="col-md-12" id="flowDiv" style="padding: 20px 0;">
+								<ol id="iList">
+									<div id="contA">
+										<fieldset>
+											<div class="form-group">
+												<label class="col-sm-2">
+				                                	<span class="tip">*</span> 名 称 
+				                                </label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control" required>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-2">
+				                                	<span class="tip">*</span> 区域 
+				                                </label>
+												<div class="col-sm-2 wi16">
+													<select name="P1" lay-filter="province" class="form-control m-b">
+														<option></option>
+													</select>
+												</div>
+												<div class="col-sm-2 wi16">
+													<select name="C1" lay-filter="city" class="form-control m-b">
+														<option></option>
+													</select>
+												</div>
+												<div class="col-sm-2 wi16">
+													<select name="A1" lay-filter="area" class="form-control m-b">
+														<option></option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group" id="data">
+												<label class="col-sm-2">
+				                                	<span class="tip">*</span> 报名时间 
+				                               </label>
+												<div class="input-daterange input-group col-sm-5" id="datepicker">
+													<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+													<input type="text" class="input-sm form-control" name="start" />
+													<span class="input-group-addon">-</span>
+													<input type="text" class="input-sm form-control" name="end" />
+												</div>
+											</div>
+											<div class="form-group description">
+												<label class="col-sm-2">
+				                                	<span class="tip">*</span> 简介 
+				                               </label>
+												<div class="col-sm-10">
+													<textarea class="layui-textarea" id="LAY_demo1"></textarea>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<div class="contentList" id="contB">
+										<fieldset>
+											<div class="tags form-group">
+												<label class="col-sm-2">
+				                                	<span class="tip">*</span> 活动标签 
+				                                </label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control form-field-tags" value="Tag Input Control" name="tags" style="display: none;">
+													<input type="text" placeholder="请输入标签内容 ···" class="tags_enter" autocomplete="off" />
+												</div>
+											</div>
+											<div class="tags form-group">
+												<label class="col-sm-2">
+				                                	<span class="tip">*</span> 奖项 
+				                                </label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control form-field-tags" value="Tag Input Control" name="tags" style="display: none;">
+													<input type="text" placeholder="请输入奖项内容 ···" class="tags_enter" autocomplete="off" />
+												</div>
+											</div>
+											<div class="tags form-group">
+												<label class="col-sm-2">
+				                                	<span class="tip">*</span> 活动分组
+				                                </label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control form-field-tags" value="Tag Input Control" name="tags" style="display: none;">
+													<input type="text" placeholder="请输入活动分组内容 ···" class="tags_enter" autocomplete="off" />
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-2">
+				                                	<span class="tip">*</span> 比赛项目
+				                                </label>
+												<div class="col-sm-10">
+													<input type="checkbox" name="" title="表演节目">
+													<input type="checkbox" name="" title="艺术作品">
+													<input type="checkbox" name="" title="艺术工作坊">
+													<input type="checkbox" name="" title="美育案例">
+													<input type="checkbox" name="" title="艺术课程">
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<div class="contentList" id="contC">
+										<fieldset>
+											<div class="form-group">
+												<label class="col-sm-3">
+				                                	<span class="tip">*</span> 赛事海报(只能上传jpg,png文件,且不超过500kb)
+				                                </label>
+												<div class="col-sm-6">
+													<div class="layui-upload">
+														<div class="fileinput fileinput-new" data-provides="fileinput" id="exampleInputUpload">
+															<div class="fileinput-new thumbnail">
+																<img id="picImg" class="picImg" src="assets/img/upload.png" alt="" />
+															</div>
+															<div class="fileinput-preview thumbnail fileinput-exists"></div>
+															<div>
+																<span class="btn btn-primary btn-file">
+							                            <span class="fileinput-new"><i class="fa fa-upload"></i>&nbsp;&nbsp;<font class="bold">选择文件</font></span>
+																<span class="fileinput-exists">换一张</span>
+																<input type="file" name="pic1" id="picID" accept="image/jpg,image/png">
+																</span>
+																<a href="javascript:;" class="btn btn-warning fileinput-exists" data-dismiss="fileinput">移除</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<div class="foot-btn">
+							<button type="button" class="btn btn-primary" id="btnBack">上一步</button>
+							<button type="button" class="btn btn-default revise" style="float:right; display:none" id="btnok">完成</button>
+							<button type="button" class="btn btn-success" style="float:right;" id="btnNext">下一步</button>
+						</div>
+						<div id="mask"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 全局js -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/plugins/layui/lay/dest/layui.all.js"></script>
+			<script src="assets/js/jquery.js"></script>
+			<!-- Steps -->
+			<script src="assets/js/plugins/staps/flow.js"></script>
+			<!-- Data picker -->
+			<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+			<script src="assets/js/plugins/cropper/cropper.min.js"></script>
+			<!-- 自定义js -->
+			<script src="assets/js/plugins/layui/citys.js"></script>
+			<script src="assets/js/plugins/layui/self.js"></script>
+			<script src="assets/js/plugins/layui/bootstrap-fileinput.js"></script>
+			<!-- Sweet alert -->
+			<script src="assets/js/plugins/sweetalert/sweetalert.min.js"></script>
+
+			<script>
+				$(function() {
+					$('#finish').click(function() {
+						var data = new FormData($('#form')[0]);
+						$.ajax({
+							url: 'xxx/xxx',
+							type: 'POST',
+							data: data,
+							async: false,
+							cache: false,
+							contentType: false,
+							processData: false,
+							success: function(data) {
+								console.log(data);
+								if(data.status) {
+									console.log('upload success');
+								} else {
+									console.log(data.message);
+								}
+							},
+							error: function(data) {
+								console.log(data.status);
+							}
+						});
+					});
+
+				})
+				$('.revise').click(function() {
+				swal({
+
+					icon: "success",
+					title: "添加成功",
+					type: "success",
+					buttons: {
+						button1: {
+							text: "OK",
+							value: true,
+						},
+					},
+				})
+				.then(function(value) {
+					if(value) {
+						window.location.href = "addactivity.html"
+					} else {}
+				});
+			});
+			</script>
+	</body>
+
+</html>

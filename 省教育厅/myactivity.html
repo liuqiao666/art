@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>艺术赛事填报系统</title>
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link href="assets/js/plugins/layui/assets/css/layui.css" rel="stylesheet">    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/plugins/blueimp/css/blueimp-gallery.css" rel="stylesheet">
+    <link href="assets/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+
+    <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>我的赛事</h5><hr>
+                    </div>
+                    <div class="ibox-content">
+				        <div class="row lists">
+				    	    <div class="col-sm-2">
+				                <button type="button" onclick="window.location.reload();" class="btn btn-white btn-lg"><i class="fa fa-refresh"></i>　刷新</button>
+				            </div>
+				            <div class="col-sm-2 form-group">
+				                <select class="form-control m-b col-sm-12" name="account">
+				                    <option>进行中</option>
+				                    <option>已结束</option>
+				                </select>
+				            </div>
+				        	<div class="col-sm-8 search-form">
+				                <form action="#" method="post">
+				                    <div class="input-group">
+				                        <input type="text" placeholder="输入要查询的艺术赛事名称···" name="search" class="form-control input-lg">
+				                        <div class="input-group-btn">
+				                            <button class="btn btn-lg btn-primary" type="submit">搜索</button>
+				                        </div>
+				                    </div>
+				                </form>
+				            </div>
+				        </div>    
+
+                        <div class="project-list">
+						    <table class="table table-bordered">
+								<thead class="is-group has-gutter">
+									<tr>
+										<th class="center">序号</th>
+										<th class="center">赛事名称</th>
+										<th class="center">主办单位</th>
+										<th class="center">开展区域</th>
+										<th class="center">开展时间段</th>
+										<th class="center">状态</th>
+										<th class="center">操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="center">
+										<td>1</td>
+										<td><a href="myen_details.html">四川省第九届中小学生艺术展演</a></td>
+										<td>四川省教育厅</td>
+										<td>四川省</td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html"></a>
+                                            <br/>
+                                            <small>2018.11.12-2019.1.1</small>
+                                        </td>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>                                        
+                                        <td style="width: 300px;">
+                                            <a href="myen_details.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-eye-open"></i>　管理</a>
+                                            <a href="editactivity.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-edit"></i>　编辑</a>
+                                            <button class="btn btn-white btn-sm delet"><i class="glyphicon glyphicon-trash"></i> 删除 </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+										<td>2</td>
+										<td><a href="myen_details.html">四川省第九届中小学生艺术展演</a></td>
+										<td>四川省教育厅</td>
+										<td>四川省</td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html"></a>
+                                            <br/>
+                                            <small>2018.11.12-2019.1.1</small>
+                                        </td>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>                                        
+                                        <td style="width: 300px;">
+                                            <a href="myen_details.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-eye-open"></i>　管理</a>
+                                            <a href="editactivity.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-edit"></i>　编辑</a>
+                                            <button class="btn btn-white btn-sm delet"><i class="glyphicon glyphicon-trash"></i> 删除 </button>
+                                        </td>
+                                    </tr>
+									<tr class="center">
+										<td>3</td>
+										<td><a href="myen_details.html">四川省第九届中小学生艺术展演</a></td>
+										<td>四川省教育厅</td>
+										<td>四川省</td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html"></a>
+                                            <br/>
+                                            <small>2018.11.12-2019.1.1</small>
+                                        </td>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>                                        
+                                        <td style="width: 300px;">
+                                            <a href="myen_details.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-eye-open"></i>　管理</a>
+                                            <a href="editactivity.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-edit"></i>　编辑</a>
+                                            <button class="btn btn-white btn-sm delet"><i class="glyphicon glyphicon-trash"></i> 删除 </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+										<td>4</td>
+										<td><a href="myen_details.html">四川省第九届中小学生艺术展演</a></td>
+										<td>四川省教育厅</td>
+										<td>四川省</td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html"></a>
+                                            <br/>
+                                            <small>2018.11.12-2019.1.1</small>
+                                        </td>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>                                        
+                                        <td style="width: 300px;">
+                                            <a href="myen_details.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-eye-open"></i>　管理</a>
+                                            <a href="editactivity.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-edit"></i>　编辑</a>
+                                            <button class="btn btn-white btn-sm delet"><i class="glyphicon glyphicon-trash"></i> 删除 </button>
+                                        </td>
+                                    </tr>  
+									<tr class="center">
+										<td>5</td>
+										<td><a href="myen_details.html">四川省第九届中小学生艺术展演</a></td>
+										<td>四川省教育厅</td>
+										<td>四川省</td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html"></a>
+                                            <br/>
+                                            <small>2018.11.12-2019.1.1</small>
+                                        </td>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>                                        
+                                        <td style="width: 300px;">
+                                            <a href="myen_details.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-eye-open"></i>　管理</a>
+                                            <a href="editactivity.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-edit"></i>　编辑</a>
+                                            <button class="btn btn-white btn-sm delet"><i class="glyphicon glyphicon-trash"></i> 删除 </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="center">
+										<td>6</td>
+										<td><a href="myen_details.html">四川省第九届中小学生艺术展演</a></td>
+										<td>四川省教育厅</td>
+										<td>四川省</td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html"></a>
+                                            <br/>
+                                            <small>2018.11.12-2019.1.1</small>
+                                        </td>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>                                        
+                                        <td style="width: 300px;">
+                                            <a href="myen_details.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-eye-open"></i>　管理</a>
+                                            <a href="editactivity.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-edit"></i>　编辑</a>
+                                            <button class="btn btn-white btn-sm delet"><i class="glyphicon glyphicon-trash"></i> 删除 </button>
+                                        </td>
+                                    </tr>
+									<tr class="center">
+										<td>7</td>
+										<td><a href="myen_details.html">四川省第九届中小学生艺术展演</a></td>
+										<td>四川省教育厅</td>
+										<td>四川省</td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html"></a>
+                                            <br/>
+                                            <small>2018.11.12-2019.1.1</small>
+                                        </td>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>                                        
+                                        <td style="width: 300px;">
+                                            <a href="myen_details.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-eye-open"></i>　管理</a>
+                                            <a href="editactivity.html" class="btn btn-white btn-sm pa5"><i class="glyphicon glyphicon-edit"></i>　编辑</a>
+                                            <button class="btn btn-white btn-sm delet"><i class="glyphicon glyphicon-trash"></i> 删除 </button>
+                                        </td>
+                                    </tr>                                  
+                                </tbody>
+                            </table>
+					        <!--分页-->
+							<div class="layui-box layui-laypage layui-laypage-default list_laypage">
+								<span class="layui-laypage-count">共 100 条</span>
+								<a href="javascript:;" class="layui-laypage-prev layui-disabled">上一页</a>
+								<span class="layui-laypage-curr">
+									<em class="layui-laypage-em"></em><em>1</em>
+								</span>
+								<a href="javascript:;">2</a>
+								<a href="javascript:;">3</a>
+								<a href="javascript:;">4</a>
+								<a href="javascript:;">5</a>
+								<span class="layui-laypage-spr">…</span>
+								<a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="10">10</a>
+								<a href="javascript:;" class="layui-laypage-next">下一页</a>
+								<span class="layui-laypage-limits">
+									<select lay-ignore="">
+										<option value="10" selected="">10 条/页</option>
+										<option value="20">20 条/页</option>
+										<option value="30">30 条/页</option>
+										<option value="40">40 条/页</option>
+										<option value="50">50 条/页</option>
+									</select>
+								</span>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- 全局js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- 自定义js -->
+    <script src="assets/js/content.js"></script>
+	<!-- blueimp gallery -->
+    <script src="assets/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script> 
+	<!-- Sweet alert -->
+	<script src="assets/js/plugins/sweetalert/sweetalert.min.js"></script>    
+    <script>
+	    $('.delet').click(function () {
+	        swal({
+	                title: "您确定要删除这条信息吗?",
+					text: "删除后将无法恢复，请谨慎操作！",
+					icon: "warning",
+					buttons: true,
+					dangerMode: true,
+	          }).then(function(value) {
+	            if (value) {
+	                swal("删除成功！", "您已经永久删除了这条信息。", "success").then(function(value) {
+					  	window.location.href = "myactivity.html"
+					});
+	            } else {
+	                swal("已取消", "您取消了删除操作！", "error");
+	            }
+	        });
+	    });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<title>艺术赛事填报系统</title>
+		<!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="assets/css/animate.css" rel="stylesheet">
+		<link href="assets/js/plugins/layui/assets/css/layui.css" rel="stylesheet">
+		<link href="assets/css/plugins/blueimp/css/blueimp-gallery.css" rel="stylesheet">
+		<link href="assets/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+		<style type="text/css">
+	    	.layui-input{border: none;width: 100%;}
+	    </style>
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content">
+			<div class="row animated fadeInRight details_box">
+				<blockquote class="layui-elem-quote layui-quote-nm pa0" style="background-color: #fff;">
+					<a onclick="javascript:history.back(-1);" class="btn btn-lg"><i class="glyphicon glyphicon-share-alt"></i>　返回</a>
+				</blockquote>
+				<div class="col-sm-4">
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<h5>赛事详细说明</h5>
+							<hr>
+						</div>
+						<div>
+							<div class="ibox-content no-padding border-left-right">
+								<a href="assets/img/p1.jpg" title="赛事宣传图" data-gallery="">
+									<img alt="image" class="img-responsive" src="assets/img/p1.jpg">
+								</a>
+							</div>
+							<div class="ibox-content profile-content">
+								<div class="row lists">
+									<div class="col-sm-6">
+										<button type="button" class="btn btn-primary btn-lg btn-block addsuf"><i class="glyphicon glyphicon-ok"></i>　报名参赛</button>
+									</div>
+									<div class="col-sm-6">
+										<a href="addcontent.html" class="btn btn-default btn-lg btn-block"><i class="glyphicon glyphicon-plus"></i>　添加比赛项目</a>
+									</div>
+								</div><br>
+								<h4><strong>四川省第九届中小学生艺术展演</strong></h4>
+								<p><i class="fa fa-map-marker"></i> 四川省成都市四零六学校</p>
+								<div class="ibox-content" style="padding: 5px 0px 10px 0px;">
+									<div>
+										<h4>赛事介绍</h4>
+										<p>根据《四川省第九届中小学生艺术展演比赛的通知》精神，前进小学领导班子高度重视，结合学校办学思想和办学特色，认真研究，反复酝酿，制订了《学校艺术节目展演活动筹备方案》。做到统筹协调，落实人员，分工协作，努力提炼学校近几年来艺术教育成果，体现前进特色。</p>
+									</div>
+									<div>
+										<div class="font-bold list">赛事标签：　　<span class="badge badge-success">四川省第九届中小学生艺术展演</span>　</div>
+										<div class="font-bold list">赛事奖项：
+											<span class="badge badge-success">一等奖</span>
+											<span class="badge badge-success">二等奖</span>
+											<span class="badge badge-success">三等奖</span>
+											<span class="badge badge-success">优秀组织奖</span>
+											<span class="badge badge-success">指导教师奖</span>
+											<span class="badge badge-success">优秀创作奖</span>
+										</div>
+										<div class="font-bold list">赛事活动分组：
+											<span class="badge badge-success">表演节目</span>
+											<span class="badge badge-success">艺术作品</span>
+											<span class="badge badge-success">艺术工作坊</span>
+											<span class="badge badge-success">美育案例</span>
+											<span class="badge badge-success">艺术课程</span>
+										</div>
+									</div>
+									<div class="list">
+										<span class="font-bold">当前赛事进度：</span>
+										<div class="stat-percent">25%</div>
+										<div class="progress progress-mini">
+											<div style="width: 25%;" class="progress-bar"></div>
+										</div>
+									</div>
+									<div class="row  m-t-sm">
+										<div class="col-sm-4">
+											<div class="font-bold">主办方</div>成都市四零六学校
+										</div>
+										<div class="col-sm-4">
+											<div class="font-bold">赛事时间段</div>2018.11.12-2019.1.1
+										</div>
+										<div class="col-sm-4 text-right">
+											<div class="font-bold">赛事性质</div>
+											<span class="label label-warning pull-right">省级</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="ibox">
+						<div class="ibox-title">
+							<h5>该赛事比赛项目列表</h5>
+							<hr>
+							<div class="collapse-link">
+								<div class="pull-left">
+									<img alt="image" class="img-circle" src="assets/img/p1.jpg">
+								</div>
+								<small class="label label-warning pull-right">表演节目</small>
+								<strong>四川省成都市四零六学校</strong>
+								<br><br>
+								<small class="text-muted">2018.12.1</small>
+							</div>
+							<div class="row" style="margin: 20px 10px;">
+								<a class="btn btn-sm btn-white right delet"><i class="glyphicon glyphicon-trash"></i> 删除</a>
+								<a class="btn btn-sm btn-white right" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-pencil"></i> 编辑 </a>
+							</div>
+						</div>
+						<div class="ibox-content" style="display: none;">
+							<div class="feed-activity-list">
+								<div class="feed-element">
+									<div class="media-body">
+										<div class="well">
+											<div class="row">
+												<div class="col-sm-3">
+													<dl class="dl-horizontal">
+														<dd><b>名称：</b>　　<span>《暴风雨》</span></dd>
+														<dd><b>编号:</b>　　<span>P00001</span></dd>
+														<dd><b>形式:</b>　　<span>器乐</span></dd>
+														<dd><b>子类:</b>　　<span>合奏</span></dd>
+														<dd><b>男生/女生人数:</b>　　<span>27 / 17</span></dd>
+														<dd><b>组别:</b>　　<span>小学组</span></dd>
+													</dl>
+												</div>
+												<div class="col-sm-5">
+													<dl class="dl-horizontal">
+														<dd><b>获奖等级:</b>　　<span>待评奖</span></dd>
+														<dd><b>原创:</b>　　<span>改编</span></dd>
+														<dd><b>展演:</b>　　<span>否</span></dd>
+														<dd><b>联系人/电话:</b>　　<span>尹彬 / 13264659218</span></dd>
+														<dd><b>创建于：</b>　　<span>2018年 2月16日 03:01</span></dd>
+														<dd>
+															<b>团队成员：</b>
+															<div class="project-people">
+																<span>胡月</span>
+																<span>王小慧</span>
+																<span>杨婷婷</span>
+																<span>司马懿</span>
+															</div>
+														</dd>
+													</dl>
+												</div>
+												<div class="col-sm-4">
+													<dl class="dl-horizontal">
+														<dd><b>审核图：</b></dd>
+														<a href="assets/img/audit.png" title="赛事内容审核图" data-gallery="">
+															<img class="feed-photo" src="assets/img/audit.png">
+														</a>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ibox">
+						<div class="ibox-title">
+							<div class="collapse-link">
+								<div class="pull-left">
+									<img alt="image" class="img-circle" src="assets/img/p1.jpg">
+								</div>
+								<small class="label label-warning pull-right">艺术作品</small>
+								<strong>四川省成都市四零六学校</strong>
+								<br><br>
+								<small class="text-muted">2018.12.1</small>
+							</div>
+							<div class="row" style="margin: 20px 10px;">
+								<a class="btn btn-sm btn-white right delet"><i class="glyphicon glyphicon-trash"></i> 删除</a>
+								<a class="btn btn-sm btn-white right" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-pencil"></i> 编辑 </a>
+							</div>
+						</div>
+						<div class="ibox-content" style="display: none;">
+							<div class="feed-activity-list">
+								<div class="feed-element">
+									<div class="media-body">
+										<div class="well">
+											<div class="row">
+												<div class="col-sm-3">
+													<dl class="dl-horizontal">
+														<dd><b>名称：</b>　　<span>《暴风雨》</span></dd>
+														<dd><b>编号:</b>　　<span>P00001</span></dd>
+														<dd><b>形式:</b>　　<span>器乐</span></dd>
+														<dd><b>子类:</b>　　<span>合奏</span></dd>
+														<dd><b>男生/女生人数:</b>　　<span>27 / 17</span></dd>
+														<dd><b>组别:</b>　　<span>小学组</span></dd>
+													</dl>
+												</div>
+												<div class="col-sm-5">
+													<dl class="dl-horizontal">
+														<dd><b>获奖等级:</b>　　<span>待评奖</span></dd>
+														<dd><b>原创:</b>　　<span>改编</span></dd>
+														<dd><b>展演:</b>　　<span>否</span></dd>
+														<dd><b>联系人/电话:</b>　　<span>尹彬 / 13264659218</span></dd>
+														<dd><b>创建于：</b>　　<span>2018年 2月16日 03:01</span></dd>
+														<dd>
+															<b>团队成员：</b>
+															<div class="project-people">
+																<span>胡月</span>
+																<span>王小慧</span>
+																<span>杨婷婷</span>
+																<span>司马懿</span>
+															</div>
+														</dd>
+													</dl>
+												</div>
+												<div class="col-sm-4">
+													<dl class="dl-horizontal">
+														<dd><b>审核图：</b></dd>
+														<a href="assets/img/audit.png" title="赛事内容审核图" data-gallery="">
+															<img class="feed-photo" src="assets/img/audit.png">
+														</a>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ibox">
+						<div class="ibox-title">
+							<div class="collapse-link">
+								<div class="pull-left">
+									<img alt="image" class="img-circle" src="assets/img/p1.jpg">
+								</div>
+								<small class="label label-warning pull-right">艺术作品</small>
+								<strong>四川省成都市四零六学校</strong>
+								<br><br>
+								<small class="text-muted">2018.12.1</small>
+							</div>
+							<div class="row" style="margin: 20px 10px;">
+								<a class="btn btn-sm btn-white right delet"><i class="glyphicon glyphicon-trash"></i> 删除</a>
+								<a class="btn btn-sm btn-white right" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-pencil"></i> 编辑 </a>
+							</div>
+						</div>
+						<div class="ibox-content" style="display: none;">
+							<div class="feed-activity-list">
+								<div class="feed-element">
+									<div class="media-body">
+										<div class="well">
+											<div class="row">
+												<div class="col-sm-3">
+													<dl class="dl-horizontal">
+														<dd><b>名称：</b>　　<span>《暴风雨》</span></dd>
+														<dd><b>编号:</b>　　<span>P00001</span></dd>
+														<dd><b>形式:</b>　　<span>器乐</span></dd>
+														<dd><b>子类:</b>　　<span>合奏</span></dd>
+														<dd><b>男生/女生人数:</b>　　<span>27 / 17</span></dd>
+														<dd><b>组别:</b>　　<span>小学组</span></dd>
+													</dl>
+												</div>
+												<div class="col-sm-5">
+													<dl class="dl-horizontal">
+														<dd><b>获奖等级:</b>　　<span>待评奖</span></dd>
+														<dd><b>原创:</b>　　<span>改编</span></dd>
+														<dd><b>展演:</b>　　<span>否</span></dd>
+														<dd><b>联系人/电话:</b>　　<span>尹彬 / 13264659218</span></dd>
+														<dd><b>创建于：</b>　　<span>2018年 2月16日 03:01</span></dd>
+														<dd>
+															<b>团队成员：</b>
+															<div class="project-people">
+																<span>胡月</span>
+																<span>王小慧</span>
+																<span>杨婷婷</span>
+																<span>司马懿</span>
+															</div>
+														</dd>
+													</dl>
+												</div>
+												<div class="col-sm-4">
+													<dl class="dl-horizontal">
+														<dd><b>审核图：</b></dd>
+														<a href="assets/img/audit.png" title="赛事内容审核图" data-gallery="">
+															<img class="feed-photo" src="assets/img/audit.png">
+														</a>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ibox">
+						<div class="ibox-title">
+							<div class="collapse-link">
+								<div class="pull-left">
+									<img alt="image" class="img-circle" src="assets/img/p1.jpg">
+								</div>
+								<small class="label label-warning pull-right">艺术作品</small>
+								<strong>四川省成都市四零六学校</strong>
+								<br><br>
+								<small class="text-muted">2018.12.1</small>
+							</div>
+							<div class="row" style="margin: 20px 10px;">
+								<a class="btn btn-sm btn-white right delet"><i class="glyphicon glyphicon-trash"></i> 删除</a>
+								<a class="btn btn-sm btn-white right" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-pencil"></i> 编辑 </a>
+							</div>
+						</div>
+						<div class="ibox-content" style="display: none;">
+							<div class="feed-activity-list">
+								<div class="feed-element">
+									<div class="media-body">
+										<div class="well">
+											<div class="row">
+												<div class="col-sm-3">
+													<dl class="dl-horizontal">
+														<dd><b>名称：</b>　　<span>《暴风雨》</span></dd>
+														<dd><b>编号:</b>　　<span>P00001</span></dd>
+														<dd><b>形式:</b>　　<span>器乐</span></dd>
+														<dd><b>子类:</b>　　<span>合奏</span></dd>
+														<dd><b>男生/女生人数:</b>　　<span>27 / 17</span></dd>
+														<dd><b>组别:</b>　　<span>小学组</span></dd>
+													</dl>
+												</div>
+												<div class="col-sm-5">
+													<dl class="dl-horizontal">
+														<dd><b>获奖等级:</b>　　<span>待评奖</span></dd>
+														<dd><b>原创:</b>　　<span>改编</span></dd>
+														<dd><b>展演:</b>　　<span>否</span></dd>
+														<dd><b>联系人/电话:</b>　　<span>尹彬 / 13264659218</span></dd>
+														<dd><b>创建于：</b>　　<span>2018年 2月16日 03:01</span></dd>
+														<dd>
+															<b>团队成员：</b>
+															<div class="project-people">
+																<span>胡月</span>
+																<span>王小慧</span>
+																<span>杨婷婷</span>
+																<span>司马懿</span>
+															</div>
+														</dd>
+													</dl>
+												</div>
+												<div class="col-sm-4">
+													<dl class="dl-horizontal">
+														<dd><b>审核图：</b></dd>
+														<a href="assets/img/audit.png" title="赛事内容审核图" data-gallery="">
+															<img class="feed-photo" src="assets/img/audit.png">
+														</a>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="btn btn-primary btn-block m"><i class="fa fa-arrow-down"></i> 显示更多</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog ibox-contents" id="ibox-content">
+				<div class="modal-content animated flipInY" style="height: 715px;">
+					<div class="pd-20">
+						<div class="layui-form">
+							<table class="layui-table">
+								<colgroup>
+									<col width="150">
+									<col width="200">
+									<col width="200">
+									<col width="150">
+									<col width="200">
+									<col width="150">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="bg-info box" colspan="6">　　表演节目基本信息</th>
+									</tr>
+									<tr>
+										<td class="bg-color">节目名称</td>
+										<td colspan="2"><input class="layui-input pa0" value="节目名称"></td>
+										<td class="bg-color">报送学校</td>
+										<td colspan="2"><input class="layui-input pa0" value="报送学校"></td>
+									</tr>
+									<tr>
+										<td class="bg-color">节目组别</td>
+										<td colspan="2">
+											<select name="">
+												<option value="">大学组</option>
+												<option value="1">小学组</option>
+												<option value="2">中学组</option>
+												<option value="3">大学组</option>
+											</select>
+										</td>
+										<td class="bg-color">表现形式</td>
+										<td colspan="2">
+											<select name="interest" lay-filter="type">
+												<option value="">声乐</option>
+												<option value="1">声乐</option>
+												<option value="2">舞蹈</option>
+												<option value="3">朗诵</option>
+												<option value="4">器乐</option>
+												<option value="5">戏剧</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td class="bg-color" class="bg-color">类别</td>
+										<td colspan="2" id="type2"> 请选择【表现形式】</td>
+										<td class="bg-color" rowspan="3">来源</td>
+										<td class="bg-color">作曲人</td>
+										<td><input class="layui-input  pa0" value="作曲人"></td>
+									</tr>
+									<tr>
+										<td class="bg-color">原创</td>
+										<td colspan="2">
+											<select name="" lay-filter="">
+												<option value="">原创</option>
+												<option value="1">原创</option>
+												<option value="2">非原创</option>
+												<option value="3">改编</option>
+												<option value="4">学习</option>
+											</select>
+										</td>
+										<td class="bg-color">作词人</td>
+										<td><input class="layui-input" value="作词人"></td>
+									</tr>
+									<tr>
+										<td class="bg-color">节目时长</td>
+										<td colspan="2"><input class="layui-input" value="节目时长"></td>
+										<td class="bg-color">编剧人</td>
+										<td><input class="layui-input" value="编剧人"></td>
+									</tr>
+									<tr class="xq">
+										<td class="bg-color" rowspan="2">伴奏</td>
+										<td class="bg-color">伴奏类型</td>
+										<td><input class="layui-input" value="伴奏类型"></td>
+										<td class="bg-color" rowspan="2">舞曲</td>
+										<td class="bg-color">编舞者</td>
+										<td><input class="layui-input" value="编舞者"></td>
+									</tr>
+									<tr class="xq">
+										<td class="bg-color">伴奏作者</td>
+										<td><input class="layui-input" value="伴奏作者"></td>
+										<td class="bg-color">编曲者</td>
+										<td><input class="layui-input" value="编曲者"></td>
+									</tr>
+									<tr>
+										<td class="bg-color">备注</td>
+										<td colspan="5"><textarea placeholder="请输入内容···" class="layui-textarea"></textarea></td>
+									</tr>
+									<tr>
+										<td class="bg-color">上传</td>
+										<td colspan="5">
+											<div class="layui-upload-drag" id="test1">
+												<i class="layui-icon"></i>
+												<p>点击上传，或将文件拖拽到此处</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info box" colspan="6">　　关联选手/教师信息</th>
+									</tr>
+									<tr>
+										<td class="bg-color">已有信息关联表下载</td>
+										<td colspan="2" style="height: 100%;">
+											<div class="layui-upload-drag">
+												<a href="http://zx.meiyusc.com/admin/works/program/downloadProgramSubmissionTab?workId=P2018090909473146481d18">
+													<i class="glyphicon glyphicon-save" style="font-size: 50px;color: #177ce3;"></i>
+													<p>点击下载已有信息关联表</p>
+												</a>
+											</div>
+										</td>
+										<td class="bg-color">上传信息关联表</td>
+										<td colspan="2">
+											<div class="layui-upload-drag" id="test4">
+												<i class="layui-icon"></i>
+												<p>按照表格中提供的格式,将学生和老师的信息进行编辑，上传成功后即可关联。</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th class="bg-info box" colspan="6">　　赛事内容申报</th>
+									</tr>
+									<tr>
+										<td class="bg-color">报送表下载</td>
+										<td colspan="2" style="height: 100%;">
+											<div class="layui-upload-drag">
+												<a href="http://zx.meiyusc.com/admin/works/program/downloadProgramSubmissionTab?workId=P2018090909473146481d18">
+													<i class="glyphicon glyphicon-save" style="font-size: 50px;color: #177ce3;"></i>
+													<p>点击下载已有报送表</p>
+												</a>
+											</div>
+										</td>
+										<td class="bg-color">上传报送表</td>
+										<td colspan="2">
+											<div class="layui-upload-drag" id="test4">
+												<i class="layui-icon"></i>
+												<p>下载报送表，核对无误后以jpg/png图格式上传，不超过1M</p>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="lists" style="text-align: center;">
+								<button type="button" class="btn btn-primary btn-lg revise"><i class="glyphicon glyphicon-ok"></i>　保存修改</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="blueimp-gallery" class="blueimp-gallery">
+			<div class="slides"></div>
+			<h3 class="title"></h3>
+			<a class="prev">‹</a>
+			<a class="next">›</a>
+			<a class="close">×</a>
+			<a class="play-pause"></a>
+			<ol class="indicator"></ol>
+		</div>
+		<!-- 全局js -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/plugins/layui/assets/layui.js"></script>
+		<!-- 自定义js -->
+		<script src="assets/js/content.js"></script>
+		<!-- blueimp gallery -->
+		<script src="assets/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+		<!-- Sweet alert -->
+		<script src="assets/js/plugins/sweetalert/sweetalert.min.js"></script>
+
+		<script type="text/javascript">
+			layui.use(['form', 'layer'], function() {
+				var form = layui.form;
+				form.on('select(type)', function(data) {
+					var option = '';
+					switch(data.value) {
+						case '1':
+							$(".xq").show();
+							option =
+								'<select name="interest" lay-filter="aihao">' +
+								'<option value=""></option>' +
+								'<option value="1">合唱</option>' +
+								'<option value="2">合唱</option>' +
+								'<option value="3">表演唱</option>' +
+								'<option value="4">重唱</option>' +
+								'<option value="5">校歌</option>' +
+								'</select>';
+							break;
+						case '2':
+							$(".xq").show();
+							option =
+								'<select name="interest" lay-filter="aihao">' +
+								'<option value=""></option>' +
+								'<option value="1">群舞</option>' +
+								'<option value="2">双人舞</option>' +
+								'<option value="3">三人舞</option>' +
+								'</select>';
+							break;
+						case '3':
+							$(".xq").show();
+							option =
+								'无';
+							break;
+						case '4':
+							$(".xq").show();
+							option =
+								'<select name="interest" lay-filter="aihao">' +
+								'<option value=""></option>' +
+								'<option value="1">合奏</option>' +
+								'<option value="2">小合奏</option>' +
+								'<option value="3">重奏</option>' +
+								'</select>';
+							break;
+						case '5':
+							$(".xq").hide();
+							option =
+								'<select name="interest" lay-filter="aihao">' +
+								'<option value=""></option>' +
+								'<option value="1">短剧</option>' +
+								'<option value="2">小品</option>' +
+								'<option value="3">戏曲</option>' +
+								'<option value="4">音乐剧</option>' +
+								'<option value="5">歌舞剧</option>' +
+								'<option value="6">京剧</option>' +
+								'<option value="7">其他</option>' +
+								'</select>';
+							break;
+						default:
+							option = '请选择【表现形式】';
+							break;
+					}
+					$('#type2').html(option);
+					form.render('select');
+				});
+			});
+		</script>
+		<script>
+			$('.pass').click(function() {
+				swal({
+
+					icon: "success",
+					title: "审核通过！",
+					type: "success",
+					buttons: {
+						button1: {
+							text: "OK",
+							value: true,
+						},
+					},
+				}).then(function(value) {
+				  	location.reload();
+				})
+			});
+			$('.reject').click(function() {
+				swal({
+
+					icon: "success",
+					title: "已驳回！",
+					type: "success",
+					buttons: {
+						button1: {
+							text: "OK",
+							value: true,
+						},
+					},
+				}).then(function(value) {
+				  	location.reload();
+				})
+			});
+			$('.addsuf').click(function() {
+				swal({
+
+						icon: "success",
+						title: "报名成功",
+						text: "点击下方按钮添加比赛项目",
+						type: "success",
+						buttons: {
+							button1: {
+								text: "添加比赛项目",
+								value: true,
+							},
+							cancel: "关闭",
+						},
+					})
+				.then(function(value) {
+					if(value) {
+						window.location.href = "addcontent.html"
+					} else {}
+				});
+			});
+			$('.revise').click(function() {
+				swal({
+
+					icon: "success",
+					title: "修改成功",
+					type: "success",
+					buttons: {
+						button1: {
+							text: "OK",
+							value: true,
+						},
+					},
+				}).then(function(value) {
+				  	window.location.href = "myen_details.html"
+				})
+			});
+            $('.delet').click(function () {
+                swal({
+                        title: "您确定要删除这条信息吗?",
+						text: "删除后将无法恢复，请谨慎操作！",
+						icon: "warning",
+						buttons: true,
+						dangerMode: true,
+                  }).then(function(value) {
+                    if (value) {
+                        swal("删除成功！", "您已经永久删除了这条信息。", "success").then(function(value) {
+						  	window.parent.location.reload();
+						});
+                    } else {
+                        swal("已取消", "您取消了删除操作！", "error");
+                    }
+                });
+            });
+            $('.suf').click(function() {
+				swal({
+
+						icon: "success",
+						title: "成功",
+						type: "success",
+				})
+			});
+		</script>
+	</body>
+
+</html>

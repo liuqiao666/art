@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>艺术赛事填报系统</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico"> 
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+	
+<div class="wrapper wrapper-content animated fadeInRight">
+	<div class="row ibox">
+	    <div class="ibox-title">
+	        <h5>赛事节目报送数据统计</h5>
+	    </div>
+		<div class="ibox-content data">
+			<div class="row">
+	    	    <div class="col-sm-1">
+	                <button type="button" onclick="window.location.reload();" class="btn btn-white btn-lg"><i class="fa fa-refresh"></i>　刷新</button>
+	            </div>
+	            <div class="col-sm-1">	
+		    		<button class="btn btn-white btn-lg"><i class="glyphicon glyphicon-open"></i> 导出信息</button>
+		  		</div>　
+	            <div class="col-sm-3 form-group" id="data">
+                    <div class="input-daterange input-group" id="datepicker">
+                    	<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <input type="text" class="input-lg form-control" name="start" value="开始日期"/>
+                        <span class="input-group-addon">-</span>
+                        <input type="text" class="input-lg form-control" name="end" value="结束日期"/>
+                    </div>
+	            </div>
+	        </div>  
+		    <table class="table table-bordered">
+				<thead class="is-group has-gutter">
+					<tr>
+						<th colspan="1" rowspan="2" class="center">地区</th>
+						<th colspan="6" rowspan="1" class="center">表演作品</th>
+						<th colspan="1" rowspan="2" class="center">校歌</th>
+						<th colspan="4" rowspan="1" class="center">艺术作品</th>
+						<th colspan="1" rowspan="2" class="center">优秀案例</th>
+						<th colspan="1" rowspan="2" class="center">工作坊</th>
+					</tr>
+					<tr>
+						<th colspan="1" rowspan="1" class="center">声乐</th>
+						<th colspan="1" rowspan="1" class="center">器乐</th>
+						<th colspan="1" rowspan="1" class="center">舞蹈</th>
+						<th colspan="1" rowspan="1" class="center">朗诵</th>
+						<th colspan="1" rowspan="1" class="center">戏剧</th>
+						<th colspan="1" rowspan="1" class="center">小计(应/实)</th>
+						<th colspan="1" rowspan="1" class="center">绘画</th>
+						<th colspan="1" rowspan="1" class="center">书法篆刻</th>
+						<th colspan="1" rowspan="1" class="center">摄影</th>
+						<th colspan="1" rowspan="1" class="center">
+							<div></div>
+						</th>
+					</tr>
+				</thead>
+		        <tbody>
+					<tr class="center">
+						<td>四零六学校</td>
+						<td>110</td>
+						<td>110</td>
+						<td>110</td>
+						<td>110</td>
+						<td>110</td>
+						<td class="green-color">110/110</td>
+						<td>110</td>
+						<td>110</td>
+						<td>110</td>
+						<td>110</td>
+						<td class="green-color">110/110</td>
+						<td class="green-color">110/110</td>
+						<td class="green-color">110/110</td>
+					</tr>
+		        </tbody>
+			</table>
+		</div>
+	</div>	
+</div>	
+    <!-- 全局js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/content.js"></script>
+    <!-- Data picker -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="assets/js/plugins/cropper/cropper.min.js"></script>
+    <script>
+    $(document).ready(function () {
+	    $('#data .input-daterange').datepicker({
+	        keyboardNavigation: false,
+	        forceParse: false,
+	        autoclose: true
+	    });
+	});
+    </script>
+</body>
+
+</html>
